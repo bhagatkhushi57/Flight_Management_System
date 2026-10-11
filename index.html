@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2><span class="plane-icon"> ✈</span>Fisher_Fly</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+
+            </ul>
+                <div class="authentication" id="authButtons">
+                    <button type="button" class="submission" id="signupBtn">Signup</button>
+                    <button type="button" class="submission" id="loginBtn">Login</button>
+                </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="content">
+            <h1>Fly Beyond Borders</h1>
+            <p>
+                Book flights to destinations worldwide.
+                Best prices and unforgettable journeys.
+            </p>
+    
+            <button class="book-btn" onclick="window.location.href='booking.html'">
+                <span class="plane-icon"> ✈</span>Book Your Flight
+            </button>
+        </div>
+    </section>
+
+
+    <!--  ------------------------------------Search box -->
+    <div class="search-box">
+
+        <div class="flight-tab">
+            <span><i class="ti ti-plane"></i> Flights</span>
+        </div>
+
+        <div class="search-container">
+
+            <div class="field">
+                <label>From</label>
+                <input type="text" placeholder="New Delhi (DEL)">
+            </div>
+
+            <div class="switch-btn">
+                <i class="ti ti-arrows-exchange"></i>
+            </div>
+
+            <div class="field">
+                <label>To</label>
+                <input type="text" placeholder="Dubai (DXB)">
+            </div>
+
+            <div class="field">
+                <label>Departure</label>
+                <input type="date">
+            </div>
+
+            <div class="field">
+                <label>Return</label>
+                <input type="date">
+            </div>
+
+            <div class="field">
+                <label>Travellers</label>
+                <input type="number" placeholder="1 Traveller">
+            </div>
+
+            <button class="search-btn book-btn">
+                Search Flights
+                <i class="ti ti-search"></i>
+            </button>
+
+        </div>
+    </div>
+<section class="results-section">
+
+    <h2>Available Flights</h2>
+
+    <div id="flightResults"></div>
+
+</section>
+
+
+    
+<!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="feature">
+            <i class="fa-solid fa-tag"></i>
+            
+            <div class="feature-desc">
+                <h3>Best Prices</h3>
+                <p>We offer the best prices on all flight bookings.</p>
+            </div>
+                
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-shield"></i>
+            <div class="feature-desc">
+                <h3>Secure Booking</h3>
+                <p>Your payments are safe and fully protected.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-headset"></i>
+            <div class="feature-desc">
+                <h3>24/7 Support</h3>
+                <p>We're here to help you anytime,anywhere.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-calendar"></i>
+            <div class="feature-desc">
+                <h3>Easy Cancellation</h3>
+                <p>Cancel or change your booking with ease.</p>
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    <!-- ==============deals================= -->
+
+    <!-- DEALS -->
+
+    <section class="deals">
+
+        <h2>Popular Flight Deals</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="Assets/dubai.jpg">
+                <h3>Dubai</h3>
+                <p>From ₹18,499</p>
+            </div>
+
+            <div class="card">
+                <img src="Assets/paris.jpg">
+                <h3>Paris</h3>
+                <p>From ₹45,999</p>
+            </div>
+
+            <div class="card">
+                <img src="Assets/bali.jpg">
+                <h3>Bali</h3>
+                <p>From ₹20,499</p>
+            </div>
+
+            <div class="card">
+                <img src="Assets/london.jpg">
+                <h3>London</h3>
+                <p>From ₹39,999</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===============Footer======= -->
+     <footer>
+        <div class="footer-content">
+            <p>
+                &copy; 2026 &nbsp;<span class="plane-icon"> ✈</span>Fisher_Fly Technologies Pvt. Ltd. All rights reserved.
+            </p>
+        </div>
+     </footer>
+
+
+
+     <!-- signup -->
+
+     <!-- SIGNUP MODAL -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="signup-modal">
+
+            <button class="close-modal" id="closeModal">
+                ✕
+            </button>
+
+            <h2>Create Account</h2>
+            <p>Join Fisher Fly today</p>
+
+            <form id="signupForm">
+
+                <div class="signup-field">
+                    <input type="text" id="fullname" placeholder="Full Name">
+                </div>
+
+                <div class="signup-field">
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="signup-field">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+
+                <div class="signup-field">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                </div>
+
+                <button type="submit" class="signup-submit">
+                    Create Account
+                </button>
+                <p class="switch-text">
+                    Already have an account?
+                    <span id="openLogin">
+                        Login
+                    </span>
+                </p>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+
+    <div id="toast"></div>
+
+    <!-- LOGIN MODAL -->
+
+    <div class="modal-overlay" id="loginOverlay">
+
+        <div class="signup-modal">
+
+            <button
+            class="close-modal"
+            id="closeLoginModal">
+                ✕
+            </button>
+
+            <h2>Welcome Back</h2>
+
+            <p>
+                Login to continue your journey
+            </p>
+
+            <form id="loginForm">
+
+                <div class="signup-field">
+                    <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email Address">
+                </div>
+
+                <div class="signup-field">
+                    <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password">
+                </div>
+
+                <button
+                type="submit"
+                class="signup-submit">
+                    Login
+                </button>
+
+                <p class="switch-text">
+
+                    Don't have an account?
+
+                    <span id="openSignup">
+                        Sign Up
+                    </span>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="signup.js"></script>
+    <script src="login.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

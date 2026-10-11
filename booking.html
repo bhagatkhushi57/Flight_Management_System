@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2><span class="plane-icon"> ✈</span>Fisher_Fly</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+
+            </ul>
+                <div class="authentication" id="authButtons">
+                    <button type="button" class="submission" id="signupBtn">Signup</button>
+                    <button type="button" class="submission" id="loginBtn">Login</button>
+                </div>
+        </nav>
+    </header>
+
+    <!-- =============Hero section========= -->
+     <section class="hero">
+        <div class="content">
+            <!-- ==========Breadcrumb========== -->
+            
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>></span>
+
+                <a href="booking.html">Flights</a>
+                <span>></span>
+
+                <span class="current">Book</span>
+            </div>
+
+            <!-- some content -->
+             <div class="hero-content">
+
+                <h1>Book Your Flight</h1>
+
+                <p>
+                    Search, compare and book the best flights
+                    for your next adventure.
+                </p>
+
+            </div>
+
+            
+
+            <!--  ------------------------------------Search box -->
+            <div class="search-box">
+
+                <div class="flight-tab">
+                    <span><i class="ti ti-plane"></i> Flights</span>
+                </div>
+
+                <div class="search-container glass">
+
+                    <div class="field">
+                        <label>From</label>
+                        <input type="text" placeholder="New Delhi (DEL)">
+                    </div>
+
+                    <div class="switch-btn">
+                        <i class="ti ti-arrows-exchange"></i>
+                    </div>
+
+                    <div class="field">
+                        <label>To</label>
+                        <input type="text" placeholder="Dubai (DXB)">
+                    </div>
+
+                    <div class="field">
+                        <label>Departure</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="field">
+                        <label>Return</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="field">
+                        <label>Travellers</label>
+                        <input type="number" placeholder="1 Traveller">
+                    </div>
+
+                    <button class="search-btn book-btn">
+                        Search Flights
+                        <i class="ti ti-search"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="results-section">
+
+        <h2>Available Flights</h2>
+
+        <div id="flightResults"></div>
+
+    </section>
+
+
+    <!--  -->
+
+    <!-- MAIN -->
+
+    <section class="booking-wrapper">
+
+        <!-- LEFT SIDE -->
+
+        <div class="flights-section">
+
+            <h2>Select Your Departure Flight</h2>
+
+            <!-- CARD -->
+
+            <div class="flight-card">
+
+                <div class="airline">
+                    <h3>IndiGo</h3>
+                </div>
+
+                <div class="time">
+                    <h2>06:20</h2>
+                    <p>DEL</p>
+                </div>
+
+                <div class="duration">
+                    <p>3h 10m</p>
+                    <div class="line"></div>
+                    <p>Direct</p>
+                </div>
+
+                <div class="time">
+                    <h2>08:30</h2>
+                    <p>DXB</p>
+                </div>
+
+                <div class="price">
+                    <h2>₹18,499</h2>
+
+                    <button>Select</button>
+                </div>
+
+            </div>
+
+            <div class="flight-card">
+
+                <div class="airline">
+                    <h3>Vistara</h3>
+                </div>
+
+                <div class="time">
+                    <h2>09:45</h2>
+                    <p>DEL</p>
+                </div>
+
+                <div class="duration">
+                    <p>3h 15m</p>
+                    <div class="line"></div>
+                    <p>Direct</p>
+                </div>
+
+                <div class="time">
+                    <h2>12:00</h2>
+                    <p>DXB</p>
+                </div>
+
+                <div class="price">
+                    <h2>₹21,999</h2>
+
+                    <button>Select</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <aside class="summary glass">
+
+            <h2>Trip Summary</h2>
+
+            <div class="summary-item">
+                <span>Departure</span>
+                <strong>20 May 2025</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Passengers</span>
+                <strong>1 Traveller</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Class</span>
+                <strong>Economy</strong>
+            </div>
+
+            <hr>
+
+            <div class="summary-item">
+                <span>Base Fare</span>
+                <strong>₹15,999</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Taxes</span>
+                <strong>₹2,500</strong>
+            </div>
+
+            <div class="summary-item total">
+                <span>Total</span>
+                <strong>₹18,499</strong>
+            </div>
+
+            <button class="continue-btn">
+                Continue
+            </button>
+        </aside>
+    </section>
+    <script src="auth.js"></script>
+</body>
+</html>

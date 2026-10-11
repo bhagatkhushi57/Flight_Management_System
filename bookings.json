@@ -1,0 +1,20 @@
+[
+  {
+    "bookingId": "FF101",
+    "airline": "IndiGo",
+    "route": "Delhi → Dubai",
+    "date": "2026-06-20",
+    "passenger": "John Doe",
+    "price": 18499,
+    "status": "Confirmed"
+  },
+  {
+    "bookingId": "FF102",
+    "airline": "Air India",
+    "route": "Delhi → London",
+    "date": "2026-07-12",
+    "passenger": "John Doe",
+    "price": 39999,
+    "status": "Completed"
+  }
+]
